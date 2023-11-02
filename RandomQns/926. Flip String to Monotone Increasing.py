@@ -18,4 +18,16 @@ class Solution:
             res = min(res, left_1s[i]+right_0s[i])
         return res
 
-print(Solution().minFlipsMonoIncr("011010"))
+class Ssolution:
+    def minFlipsMonoIncr(self, s: str) -> int:
+        cntOnes = 0
+        res = 0
+        for c in s:
+            if c == '1':
+                cntOnes += 1
+            else:
+                res = min(cntOnes,res+1)
+        return res
+
+
+print(Ssolution().minFlipsMonoIncr("11011"))
